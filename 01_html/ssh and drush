@@ -1,0 +1,175 @@
+SSH
+
+Start session
+	ssh u60071756@home341272207.1and1-data.host
+	Lhpaul22
+
+End session
+	exit
+
+Install drush (local)
+	# Browse to https://github.com/drush-ops/drush/releases and download the drush.phar attached to the latest 8.x release.
+
+	# Test your install.
+	php drush.phar core-status
+
+	# Rename to `drush` instead of `php drush.phar`. Destination can be anywhere on $PATH. 
+	chmod +x drush.phar
+	sudo mv drush.phar /usr/local/bin/drush
+
+	# Optional. Enrich the bash startup file with completion and aliases.
+	drush init
+
+
+Install Drush using Composer (1and1)
+	curl -sS https://getcomposer.org/installer | /usr/bin/php5.5-cli
+	touch .bashrc
+	alias php="/usr/bin/php5.5-cli"
+	alias composer="php ~/composer.phar"
+	export DRUSH_PHP="/usr/bin/php5.5-cli"
+	alias drush="~/.composer/vendor/bin/drush"
+	. .bashrc
+	composer global require drush/drush:8.1.*
+
+	+ replace .htaccess via FTP
+
+Create local aliases
+	<?php
+	$aliases['px_local'] = array(
+	   'root' => '/var/www/html/drupal7/',
+	   'uri' => 'localhost/drupal7',
+	);
+	$aliases['px_remote'] = array(
+	   'root' => 'ssh://u60071756@home341272207.1and1-data.host/pixelminds',
+	   'uri' => 'pixelminds.net',
+	);
+	?>
+
+List
+	ls
+	dir
+
+Change directory
+	cd drush
+	cd ..
+
+=============================
+MYSQL
+
+Create database
+	mysqladmin -u username -p create dbname
+
+
+==============================
+DRUSH
+
+Enter maintenance mode
+	drush vset --exact maintenance_mode 1
+
+Quit maintenance mode
+	drush vset --exact maintenance_mode 0
+
+Clear cache
+	drush cache-clear all
+
+Update Drupal
+	drush pm-update drupal
+	alias > drush upc
+(alternative)
+	drush pm-updatecode --no-core
+	drush updatedb
+
+Backup-migrate
+Backup database
+	drush bam-backup
+	alias > drush bb
+
+Install Drupal
+Download
+	drush dl drupal-7.58
+Move
+	mv drupal-7.58/* .
+	mv drupal-7.58/.htaccess .
+Remove empty dir
+	rm -r drupal-7.58
+Install
+	drush site-install standard --account-name=admin --account-pass=demo --db-url=mysql://root:250478lhp@localhost/drushtest
+
+Install modules (enable, disable)
+	drush @px_local dl token
+	drush @px_local en token
+	drush @px_local dis token
+Install themes (enable, set default, disable)
+	drush @px_local dl basic
+	drush @px_local pm-enable basic
+	drush @px_local vset theme_default basic
+	drush @px_local pm-disable basic
+
+===================================
+GIT
+
+Concepts
+	Add to staging
+	Commit to head (-a added, -m modified)
+	Push to remote repository
+	Checkout new branch
+	Status -- see the files changed and not added/commited
+
+URL
+	Git https://github.com/pixelminds/bootstrap_starter
+	pixelminds 250478lhp
+
+git config --global user.email "pxmind@gmail.com"
+git config --global user.name "pixelminds"
+
+Create from local
+	git init
+	git add *
+	git remote add origin https://github.com/pixelminds/bootstrap_starter
+	git pull origin master
+
+List remote repositories
+	git remote -v
+
+remove files
+	git rm --cached prepros-6.config
+
+Upload changes
+	git commit -m "1.0"		only staged files
+	git commit -a -m "1.1"    	all modified/deleted files are staged first (add and rm)
+	git push --all origin
+
+Create from remote
+	git clone https://github.com/pixelminds/bootstrap_starter
+
+Update from origin
+	cd pixelminds/sites/all/themes/bootstrap_starter
+	git pull origin master
+
+.gitignore
+	readme.txt
+	*.txt
+	bootstrap/
+
+NOT WORKING
+==================
+https://www.linux.com/learn/HOW-RUN-YOUR-OWN-GIT-SERVER
+Own GIT server
+	sudo apt-get install git-core
+	sudo useradd pxmind
+	passwd pxmind
+	ssh-keygen -t rsa
+	cat ~/.ssh/id_rsa.pub | ssh u60071756@home341272207.1and1-data.host "mkdir -p ~/pixelminds/git/.ssh && cat >>  ~/pixelminds/git/.ssh/authorized_keys"
+remote
+	ssh u60071756@home341272207.1and1-data.host
+	cd /pixelminds/git/test/
+	git init --bare
+local
+	cd [local directory]
+	git init
+	git add .
+	git commit -m "1.0" -a
+	git remote add origin ssh://u60071756@home341272207.1and1-data.host/pixelminds/git/test/
+	git push origin master
+clone
+	git clone u60071756@home341272207.1and1-data.host:/pixelminds/git/test/
