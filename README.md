@@ -1,5 +1,5 @@
 # OpenBare
-[![Release_v0.1](https://img.shields.io/badge/release-v0.1-orange.svg)](https://github.com/pixelminds/openbare) [![Bootstrap_v4.0.0](https://img.shields.io/badge/bootstrap-4.0.0-blue.svg)](https://getbootstrap.com/) [![GPLv3_license](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.txt)
+[![Release v0.1](https://img.shields.io/badge/release-v0.1-orange.svg)](https://github.com/pixelminds/openbare) [![Bootstrap_v4.0.0](https://img.shields.io/badge/bootstrap-4.0.0-blue.svg)](https://getbootstrap.com/) [![GPLv3_license](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.txt)
 
 **OpenBare** is an open starter theme with a minimal approach, and versioned to 5 formats: plain static HTML, plus the 3 main CMS.
 Each version is built on top of the official barebones starter kit:
