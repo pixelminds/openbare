@@ -1,15 +1,18 @@
+ABOUT CLASSY
+-----------
 
-ABOUT OPENBARE
---------------
+Classy is a base theme that provides many classes in its markup. For cleaner
+markup (fewer classes), the default Stable base theme can be used instead.
 
-The Openbare theme is based on the demo theme Stark, and all styling is kept to minimum in order to let everyone build it up to their needs.
+To use Classy as your base theme, set the 'base theme' in your theme's .info.yml
+file to "classy":
+  base theme: classy
 
+See https://www.drupal.org/docs/8/theming-drupal-8/using-classy-as-a-base-theme
+for more information on using the Classy theme.
 
 ABOUT DRUPAL THEMING
 --------------------
 
-To learn how to build your own custom theme and override Drupal's default code,
-see the Theming Guide: https://www.drupal.org/docs/8/theming
-
-See the themes/README.txt for more information on where to place your
-custom themes to ensure easy maintenance and upgrades.
+See https://www.drupal.org/docs/8/theming for more information on Drupal
+theming.
