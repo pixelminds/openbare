@@ -11,3 +11,15 @@ version: '8.5.1'
 core: '8.x'
 project: 'drupal'
 datestamp: 1522264150
+
+regions:
+	header: 'Header'
+	primary_menu: 'Primary menu'
+	secondary_menu: 'Secondary menu'
+	highlighted: 'Highlighted'
+	help: 'Help'
+	content: 'Content'
+	sidebar_first: 'Sidebar first'
+	sidebar_second: 'Sidebar second'
+	footer: 'Footer'
+	breadcrumb: 'Breadcrumb'

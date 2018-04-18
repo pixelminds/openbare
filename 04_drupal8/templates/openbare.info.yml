@@ -1,0 +1,25 @@
+name: Openbare
+type: theme
+description: 'This is a sub theme of Classy. Learn how to use Classy as a base theme in the <a href="https://www.drupal.org/docs/8/theming">Drupal 8 Theming Guide</a>.'
+version: 0.1.3
+core: 8.x
+base theme: classy
+
+# Defines libraries group in which we can add css/js.
+libraries:
+  - openbare/global-styling
+
+# Regions
+regions:
+  header: Header
+  featured: Featured
+  content: Content
+  sidebar_first: First sidebar
+  sidebar_second: Second sidebar
+  footer: Footer
+
+# Information added by Drupal.org packaging script on 2018-03-28
+version: '8.5.1'
+core: '8.x'
+project: 'drupal'
+datestamp: 1522264150
