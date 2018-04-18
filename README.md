@@ -12,7 +12,10 @@ This project started with the need to rapidly build a theme in response to our c
 We're just taking off, so please be patient. We hope we cab get to a release candidate sometime before summer.
 ### Tools and resources used
 * [**Prepros**](https://prepros.io/) by [Subash Pathak](https://github.com/Subash) for SASS / Jade preprocessing.
-* [**Bootstrap 4.0.0**](https://getbootstrap.com/), designed and built with all the love in the world by @mdo and @fat. Maintained by the core team with the help of our contributors, for the base styling and interaction.
+* [**Bourbon**](http://bourbon.io) - Thanks to the design team at [Thoughtbot](http://thoughtbot.com/) for the Bourbon ecosystem.
+  * [Bourbon](https://github.com/thoughtbot/bourbon) v5.0.0 - SASS mixins for fast prototyping.
+  * [Neat](https://github.com/thoughtbot/neat) v2.1.0 - Semantic grid for use with Bourbon.
+  * [Bitters](https://github.com/thoughtbot/bitters) v1.8.0 - base SASS variable set.
 * Web resources:
   * [**HTML 2 Jade**](http://html2jade.org/) for the HTML > Jade(Pug) translation.
   * [**Lorempixel**](http://lorempixel.com/) for the placeholder images.
