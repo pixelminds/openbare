@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Openbare theme.
+
+openbare.settings:
+  type: theme_settings
+  label: 'Openbare settings'
