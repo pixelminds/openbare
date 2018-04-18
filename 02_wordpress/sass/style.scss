@@ -45,6 +45,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
 
+
+/*--------------------------------------------------------------
+# Openbare Common Styles, and perhaps custom tweaks for WP
+--------------------------------------------------------------*/
+@import "../../wordpress_styles";
+
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -104,3 +110,4 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+
